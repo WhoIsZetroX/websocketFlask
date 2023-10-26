@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskApp</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+    <script src="/static/main.js"></script>
+</head>
+<body>
+    <h3>List:</h3>
+    <ul>
+        {% for t in topics %}
+            <li>{{ t }}</li>
+        {% endfor %}
+    </ul>
+
+    <p id="topic"> Current topic: {{ initial_topic }} </p>
+
+    <button id="prevTopic">prev</button>  <button id="nextTopic">next</button>
+    <p id="errorText"></p>
+</body>
+
+
+</html>
